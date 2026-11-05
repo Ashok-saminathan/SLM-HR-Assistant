@@ -1,0 +1,62 @@
+{
+  "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": null,
+  "method": "lora",
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "training": {
+    "epochs": 3,
+    "per_device_batch_size": 4,
+    "grad_accum_steps": 4,
+    "learning_rate": 0.0002,
+    "lr_scheduler": "cosine",
+    "warmup_ratio": 0.05,
+    "weight_decay": 0.0,
+    "max_seq_len": 768,
+    "logging_steps": 2,
+    "gradient_checkpointing": true
+  },
+  "seed": 42,
+  "trainable_params": 18464768,
+  "total_params": 1562179072,
+  "train_examples": 92,
+  "val_examples": 21,
+  "train_runtime_s": 55.2,
+  "train_loss": 0.2709018650154273,
+  "final_eval": {
+    "eval_loss": 0.10071102529764175,
+    "eval_runtime": 1.1951,
+    "eval_samples_per_second": 17.571,
+    "eval_steps_per_second": 5.02,
+    "epoch": 3.0
+  },
+  "peak_gpu_mb": 4886.2,
+  "adapter_dir": "/content/slm-project/artifacts/adapter",
+  "environment": {
+    "python": "3.13.16",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.22.0",
+    "peft": "0.21.2",
+    "accelerate": "1.15.0",
+    "bitsandbytes": "0.50.2",
+    "fastapi": "0.141.1",
+    "pydantic": "2.14.1",
+    "cuda_available": true,
+    "gpu": "Tesla T4",
+    "gpu_memory_gb": 15.64,
+    "cpu_count": 2
+  }
+}

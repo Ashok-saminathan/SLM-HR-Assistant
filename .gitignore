@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+*.key
+# model artifacts: publish adapters to the Hugging Face Hub / a release instead of git
+artifacts/
+experiments/**/checkpoints/
+experiments_0.5b/**/checkpoints/
+*.safetensors
+*.bin
+*.gguf
+# runtime logs
+experiments/api/
+.pytest_cache/

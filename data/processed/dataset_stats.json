@@ -1,0 +1,79 @@
+{
+  "raw_records": 156,
+  "clean_records": 133,
+  "dropped": {
+    "missing_question": 3,
+    "key_fact_not_in_answer": 3,
+    "unknown_policy_id": 3,
+    "question_length": 3,
+    "empty_answer": 3,
+    "duplicate_question": 8
+  },
+  "splits": {
+    "train": {
+      "n": 92,
+      "kinds": {
+        "answerable": 49,
+        "wrong_context": 28,
+        "out_of_scope": 15
+      }
+    },
+    "validation": {
+      "n": 21,
+      "kinds": {
+        "answerable": 9,
+        "wrong_context": 7,
+        "out_of_scope": 5
+      }
+    },
+    "test": {
+      "n": 20,
+      "kinds": {
+        "answerable": 15,
+        "out_of_scope": 5
+      }
+    }
+  },
+  "policy_split": {
+    "train": [
+      "annual-bonus",
+      "anti-harassment",
+      "attendance",
+      "data-security",
+      "dress-code",
+      "exit-process",
+      "gratuity",
+      "grievance",
+      "health-insurance",
+      "leave-annual",
+      "leave-bereavement",
+      "leave-maternity",
+      "leave-paternity",
+      "notice-period",
+      "overtime",
+      "parking-transport",
+      "probation",
+      "provident-fund",
+      "public-holidays",
+      "relocation",
+      "salary-payment",
+      "travel-expenses",
+      "wfh",
+      "work-hours"
+    ],
+    "validation": [
+      "employee-assistance",
+      "learning-budget",
+      "leave-sick",
+      "meal-allowance",
+      "performance-review"
+    ],
+    "test": [
+      "internal-transfer",
+      "joining-formalities",
+      "leave-casual",
+      "leave-marriage",
+      "referral-bonus"
+    ]
+  }
+}

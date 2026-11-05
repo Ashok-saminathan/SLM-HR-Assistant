@@ -1,0 +1,62 @@
+{
+  "name": "ft_merged_nf4_bs4",
+  "variant": "ft_merged_nf4",
+  "split": "test",
+  "mode": "retrieved",
+  "batch_size": 4,
+  "model": {
+    "name": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": null,
+    "trust_remote_code": false
+  },
+  "generation": {
+    "max_new_tokens": 160,
+    "do_sample": false,
+    "repetition_penalty": 1.0
+  },
+  "metrics": {
+    "n_cases": 20,
+    "n_answerable": 15,
+    "n_out_of_scope": 5,
+    "valid_json_rate": 1.0,
+    "task_success_rate": 0.9,
+    "answerable_accuracy": 0.9,
+    "fact_recall_raw_mean": 0.8667,
+    "token_f1_mean": 0.5919,
+    "source_accuracy": 0.8667,
+    "retrieval_hit_rate": 0.9333,
+    "task_success_given_retrieval_hit": 0.9286,
+    "correct_refusal_rate_oos": 1.0,
+    "false_refusal_rate_given_hit": 0.0714,
+    "latency_mean_s": 0.5009,
+    "latency_p50_s": 0.4648,
+    "latency_p95_s": 0.5808,
+    "new_tokens_mean": 35.4,
+    "tokens_per_s_mean": 71.3834
+  },
+  "failures": {
+    "false_refusal": 1,
+    "retrieval_miss": 1
+  },
+  "resources": {
+    "load_time_s": 1.31,
+    "model_footprint_mb": 1070.2,
+    "gpu_peak_mb": 1186.6,
+    "cpu_rss_mb": 1744.9
+  },
+  "environment": {
+    "python": "3.13.16",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.22.0",
+    "peft": "0.21.2",
+    "accelerate": "1.15.0",
+    "bitsandbytes": "0.50.2",
+    "fastapi": "0.141.1",
+    "pydantic": "2.14.1",
+    "cuda_available": true,
+    "gpu": "Tesla T4",
+    "gpu_memory_gb": 15.64,
+    "cpu_count": 2
+  }
+}

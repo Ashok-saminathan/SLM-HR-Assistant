@@ -1,0 +1,22 @@
+# Selected SLM (see reports/model_selection.md for the comparison and justification).
+model:
+  name: Qwen/Qwen2.5-1.5B-Instruct   # Apache-2.0, ~1.5B params, 32K context
+  revision: null                     # TODO before final run: pin an exact commit hash for reproducibility
+  trust_remote_code: false
+
+generation:                          # "efficient generation settings": greedy, short cap, KV-cache on
+  max_new_tokens: 160
+  do_sample: false
+  repetition_penalty: 1.0
+
+paths:
+  adapter_dir: artifacts/adapter
+  merged_dir: artifacts/merged
+  experiments_dir: experiments
+
+retrieval:
+  top_k: 1
+
+eval:
+  mode: retrieved                    # retrieved = real pipeline | oracle = gold policy text (isolates the model)
+  batch_size: 1

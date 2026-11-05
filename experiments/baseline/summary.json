@@ -1,0 +1,42 @@
+{
+  "model": {
+    "name": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": null,
+    "trust_remote_code": false
+  },
+  "generation_settings": {
+    "max_new_tokens": 160,
+    "do_sample": false,
+    "repetition_penalty": 1.0
+  },
+  "n_prompts": 12,
+  "valid_json_rate": 0.333,
+  "latency_mean_s": 1.133,
+  "load_time_s": 7.69,
+  "error_counts": {
+    "empty_or_non_string_answer": 8
+  },
+  "resources": {
+    "gpu_peak_mb": 2969.0,
+    "cpu_rss_mb": 1542.6
+  },
+  "observed_limitations_auto": [
+    "empty_or_non_string_answer: 8/12 prompts"
+  ],
+  "observed_limitations_manual": "TODO: read experiments/baseline/outputs.jsonl and note qualitative issues (wrong facts, ignoring the excerpt, verbose answers, no refusal ...).",
+  "environment": {
+    "python": "3.13.16",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.22.0",
+    "peft": "0.21.2",
+    "accelerate": "1.15.0",
+    "bitsandbytes": "0.50.2",
+    "fastapi": "0.141.1",
+    "pydantic": "2.14.1",
+    "cuda_available": true,
+    "gpu": "Tesla T4",
+    "gpu_memory_gb": 15.64,
+    "cpu_count": 2
+  }
+}

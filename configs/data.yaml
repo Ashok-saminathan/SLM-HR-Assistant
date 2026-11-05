@@ -1,0 +1,4 @@
+seed: 42
+# Fraction of answerable TRAIN/VALIDATION questions that are paired with a wrong policy excerpt
+# (target = refusal). Teaches the model to ground answers in the supplied context.
+wrong_context_rate: 0.30

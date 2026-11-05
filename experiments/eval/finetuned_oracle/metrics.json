@@ -1,0 +1,61 @@
+{
+  "name": "finetuned_oracle",
+  "variant": "ft_merged",
+  "split": "test",
+  "mode": "oracle",
+  "batch_size": 1,
+  "model": {
+    "name": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": null,
+    "trust_remote_code": false
+  },
+  "generation": {
+    "max_new_tokens": 160,
+    "do_sample": false,
+    "repetition_penalty": 1.0
+  },
+  "metrics": {
+    "n_cases": 20,
+    "n_answerable": 15,
+    "n_out_of_scope": 5,
+    "valid_json_rate": 1.0,
+    "task_success_rate": 0.8,
+    "answerable_accuracy": 0.8,
+    "fact_recall_raw_mean": 0.7333,
+    "token_f1_mean": 0.596,
+    "source_accuracy": 0.7333,
+    "retrieval_hit_rate": 1.0,
+    "task_success_given_retrieval_hit": 0.7333,
+    "correct_refusal_rate_oos": 1.0,
+    "false_refusal_rate_given_hit": 0.2667,
+    "latency_mean_s": 1.2961,
+    "latency_p50_s": 1.3017,
+    "latency_p95_s": 1.5417,
+    "new_tokens_mean": 34.65,
+    "tokens_per_s_mean": 26.9213
+  },
+  "failures": {
+    "false_refusal": 4
+  },
+  "resources": {
+    "load_time_s": 3.49,
+    "model_footprint_mb": 2944.4,
+    "gpu_peak_mb": 2969.4,
+    "cpu_rss_mb": 1516.1
+  },
+  "environment": {
+    "python": "3.13.16",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.22.0",
+    "peft": "0.21.2",
+    "accelerate": "1.15.0",
+    "bitsandbytes": "0.50.2",
+    "fastapi": "0.141.1",
+    "pydantic": "2.14.1",
+    "cuda_available": true,
+    "gpu": "Tesla T4",
+    "gpu_memory_gb": 15.64,
+    "cpu_count": 2
+  }
+}
